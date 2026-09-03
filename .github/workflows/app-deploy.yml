@@ -26,6 +26,15 @@ jobs:
           uses: actions/checkout@v4
           with:
             lfs: true
+        - name: Restore certificates from secrets
+          env:
+            CERT_CRT_B64: ${{ secrets.CERT_CRT_B64 }}
+          run: |
+            if [ -n "$CERT_CRT_B64" ]; then
+              echo "$CERT_CRT_B64" | base64 -d > assert/cert.crt
+            fi
+
+            ls -l assert/cert.crt
         - name: Setup
           run: |
             mkdir -v -p ~/.local/share/godot/export_templates/

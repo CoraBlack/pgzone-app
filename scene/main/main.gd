@@ -8,6 +8,7 @@ var server_url: String = "https://101.33.205.242:443"
 func _ready() -> void:
 	var cert = load("res://assert/cert.crt")
 	http_requester.set_tls_options(TLSOptions.client_unsafe(cert))
+	
 	var result = http_requester.request(server_url + "/blogs")
 	animation_player.play_backwards("leave_scene")
 	await animation_player.animation_finished

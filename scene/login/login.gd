@@ -22,8 +22,8 @@ var state: PanelState = PanelState.SignIn
 @export var animation_player: AnimationPlayer
 
 func _ready() -> void:
-	#var cert = load("res://assert/cert.crt")
-	#http_requester.set_tls_options(TLSOptions.client_unsafe(cert))
+	var cert = load("res://assert/cert.crt")
+	http_requester.set_tls_options(TLSOptions.client_unsafe(cert))
 	
 	animation_player.play("entry")
 	await animation_player.animation_finished
