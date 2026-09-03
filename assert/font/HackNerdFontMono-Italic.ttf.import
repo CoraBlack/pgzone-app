@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://babd7w7x2jwym"
-path="res://.godot/imported/HackNerdFontMono-Regular.ttf-79aa011cdd918e83a15633992fe9a7a7.fontdata"
+uid="uid://lohjeqklqe4m"
+path="res://.godot/imported/HackNerdFontMono-Italic.ttf-9e6460b1b48c614cdf1d4e4ea67f84aa.fontdata"
 
 [deps]
 
-source_file="res://assert/HackNerdFontMono-Regular.ttf"
-dest_files=["res://.godot/imported/HackNerdFontMono-Regular.ttf-79aa011cdd918e83a15633992fe9a7a7.fontdata"]
+source_file="res://assert/font/HackNerdFontMono-Italic.ttf"
+dest_files=["res://.godot/imported/HackNerdFontMono-Italic.ttf-9e6460b1b48c614cdf1d4e4ea67f84aa.fontdata"]
 
 [params]
 

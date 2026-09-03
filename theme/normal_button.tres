@@ -1,5 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://bihwhnj1jsfb3"]
 
+[ext_resource type="FontFile" uid="uid://dd484sgnpcflv" path="res://assert/font/HackNerdFont-Regular.ttf" id="1_flktm"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loxft"]
 bg_color = Color(0.12005135, 0.12005121, 0.12005127, 1)
 corner_radius_top_left = 8
@@ -9,4 +11,5 @@ corner_radius_bottom_left = 8
 shadow_size = 3
 
 [resource]
+Button/fonts/font = ExtResource("1_flktm")
 Button/styles/normal = SubResource("StyleBoxFlat_loxft")

@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://uxvephipv284"]
 
-[ext_resource type="FontFile" uid="uid://babd7w7x2jwym" path="res://assert/HackNerdFontMono-Regular.ttf" id="1_ijjdn"]
+[ext_resource type="FontFile" uid="uid://babd7w7x2jwym" path="res://assert/font/HackNerdFontMono-Regular.ttf" id="1_ijjdn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxuov"]
 bg_color = Color(0.101960786, 0.12156863, 0.14509805, 1)

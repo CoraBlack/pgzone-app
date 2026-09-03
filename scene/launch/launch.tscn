@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bohm53kg5oi5i" path="res://scene/launch/launch.gd" id="1_3g5cq"]
 [ext_resource type="Theme" uid="uid://uxvephipv284" path="res://theme/bg_theme.tres" id="1_coxjd"]
-[ext_resource type="FontFile" uid="uid://spdljv8r600c" path="res://assert/HackNerdFontMono-BoldItalic.ttf" id="2_3g5cq"]
+[ext_resource type="FontFile" uid="uid://spdljv8r600c" path="res://assert/font/HackNerdFontMono-BoldItalic.ttf" id="2_3g5cq"]
 
 [sub_resource type="Animation" id="Animation_coxjd"]
 length = 0.001
