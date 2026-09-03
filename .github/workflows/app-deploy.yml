@@ -33,7 +33,7 @@ jobs:
         - name: Web Build
           run: |
             mkdir -v -p build/web
-            EXPORT_DIR="$(readlink -f build)"
+            EXPORT_DIR="$(readlink -f build/web)"
             cd $PROJECT_PATH
             godot --headless --verbose --export-release "Web" "$EXPORT_DIR/index.html"
         - name: Upload Artifact
