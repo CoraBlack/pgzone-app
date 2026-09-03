@@ -1,0 +1,49 @@
+name: app-deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  GODOT_VERSION: 4.7.2
+  EXPORT_NAME: index
+  PROJECT_PATH: index
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+      concurrency:
+        group: pages-deploy
+        cancel-in-progress: true
+      timeout-minutes: 30
+      container:
+        image: barichello/godot-ci:4.7.2
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+          with:
+            lfs: true
+        - name: Setup
+          run: |
+            mkdir -v -p ~/.local/share/godot/export_templates/
+            mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+        - name: Web Build
+          run: |
+            mkdir -v -p build/web
+            EXPORT_DIR="$(readlink -f build)"
+            cd $PROJECT_PATH
+            godot --headless --verbose --export-release "Web" "$EXPORT_DIR/index.html"
+        - name: Upload Artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: web
+            path: build/web
+        - name: Deploy to GitHub Pages 🚀
+          uses: JamesIves/github-pages-deploy-action@releases/v4
+          with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: build/web # The folder the action should deploy.
+            clean: true

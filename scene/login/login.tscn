@@ -1,0 +1,350 @@
+[gd_scene format=3 uid="uid://qqaqeruelg5u"]
+
+[ext_resource type="Script" uid="uid://b7okvkk1ciato" path="res://scene/login/login.gd" id="1_0yhb2"]
+[ext_resource type="Theme" uid="uid://bwee1nqikcncr" path="res://theme/float_panel.tres" id="1_xhfpm"]
+[ext_resource type="Theme" uid="uid://tyhgr0yngv24" path="res://theme/normal_lineedit.tres" id="2_cuut1"]
+[ext_resource type="FontFile" uid="uid://lohjeqklqe4m" path="res://assert/HackNerdFontMono-Italic.ttf" id="3_4batq"]
+[ext_resource type="Texture2D" uid="uid://mv3p3om3xfo5" path="res://icon.svg" id="3_rlkab"]
+[ext_resource type="Theme" uid="uid://bihwhnj1jsfb3" path="res://theme/normal_button.tres" id="3_y27e1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y27e1"]
+bg_color = Color(0.101960786, 0.12156863, 0.14509805, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_cuut1"]
+Panel/styles/panel = SubResource("StyleBoxFlat_y27e1")
+
+[sub_resource type="Animation" id="Animation_4batq"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("login_panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(640, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("login_panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tips_panel:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(3),
+"points": PackedFloat32Array(128, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tips_panel:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(3),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_0yhb2"]
+resource_name = "entry"
+length = 1.2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("login_panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(3, 3, 3),
+"points": PackedFloat32Array(384, -0.25, 0, 0.25, 0, 471.45758, -0.099999994, -135.83069, 0.099999994, 135.83069, 640, -0.26666665, -2.5270996, 0.26666665, 2.5270996),
+"times": PackedFloat32Array(0, 0.4, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("login_panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(3, 3),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0, 64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tips_panel:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(3, 3, 3),
+"points": PackedFloat32Array(384, -0.25, 0, 0.25, 0, 310.47305, -0.099999994, 110.676865, 0.099999994, -110.676865, 128, -0.23333335, -11.426987, 0.23333335, 11.426987),
+"times": PackedFloat32Array(0, 0.4, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("tips_panel:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(3, 3),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0, 64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_pssdj"]
+resource_name = "panel_switch"
+length = 1.02
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("tips_panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 3),
+"points": PackedFloat32Array(128, -0.25, 0, 0.26666668, -107.82732, 640, -0.26666665, 141.10126, 0.26666665, -141.10126),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("tips_panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 3),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0, 64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("login_panel:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 3),
+"points": PackedFloat32Array(640, -0.25, 0, 0.26666668, 213.14178, 134.58566, -0.26666665, -163.94089, 0.26666665, 163.94089),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("login_panel:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 3),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0, 64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rlkab"]
+_data = {
+&"RESET": SubResource("Animation_4batq"),
+&"entry": SubResource("Animation_0yhb2"),
+&"panel_switch": SubResource("Animation_pssdj")
+}
+
+[node name="login" type="Control" unique_id=1991356598 node_paths=PackedStringArray("input_account", "input_passwd", "input_passwd2", "pwd_gap", "top_label", "tips", "func_btn", "switch_btn", "http_requester", "animation_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0yhb2")
+input_account = NodePath("login_panel/VBoxContainer/input_container/account")
+input_passwd = NodePath("login_panel/VBoxContainer/input_container/passwd")
+input_passwd2 = NodePath("login_panel/VBoxContainer/input_container/passwd2")
+pwd_gap = NodePath("login_panel/VBoxContainer/input_container/2pwd_gap")
+top_label = NodePath("login_panel/VBoxContainer/Top label")
+tips = NodePath("login_panel/VBoxContainer/tips")
+func_btn = NodePath("login_panel/VBoxContainer/btn_container/func_btn")
+switch_btn = NodePath("login_panel/VBoxContainer/btn_container/switch_btn")
+http_requester = NodePath("HTTPRequest")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="bg" type="Panel" parent="." unique_id=391246950]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_cuut1")
+
+[node name="tips_panel" type="Panel" parent="." unique_id=1589815051]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11100001
+anchor_top = 0.099000014
+anchor_right = 0.44400004
+anchor_bottom = 0.901
+offset_left = 0.12799072
+offset_top = -0.15200806
+offset_right = 0.5144043
+offset_bottom = 0.15197754
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xhfpm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="tips_panel" unique_id=244691326]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.187
+anchor_top = 0.062000003
+anchor_right = 0.81200004
+anchor_bottom = 0.98300004
+offset_left = 0.19200134
+offset_top = -0.24000168
+offset_right = 0.19198608
+offset_bottom = 2.8879395
+
+[node name="Pg zone" type="Label" parent="tips_panel/VBoxContainer" unique_id=425226695]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+theme_override_fonts/font = ExtResource("3_4batq")
+theme_override_font_sizes/font_size = 32
+text = "Pg zone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="login_tips" type="VBoxContainer" parent="tips_panel/VBoxContainer" unique_id=1277624430]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="tips_panel/VBoxContainer/login_tips" unique_id=1981302221]
+layout_mode = 2
+texture = ExtResource("3_rlkab")
+stretch_mode = 5
+
+[node name="signup_tips" type="VBoxContainer" parent="tips_panel/VBoxContainer" unique_id=1210484273]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="login_panel" type="Panel" parent="." unique_id=2106066909]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5552222
+anchor_top = 0.09896297
+anchor_right = 0.88922226
+anchor_bottom = 0.90138274
+offset_left = 0.3840332
+offset_top = -0.12800598
+offset_right = -0.3840332
+offset_bottom = -0.0960083
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xhfpm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="login_panel" unique_id=591254489]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19600001
+anchor_right = 0.804
+anchor_bottom = 0.99000007
+offset_left = 0.19199371
+offset_right = -0.1920166
+offset_bottom = -0.15966797
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top label" type="Label" parent="login_panel/VBoxContainer" unique_id=560950447]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 1.5
+text = "欢迎回到Pg zone"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="input_container" type="VBoxContainer" parent="login_panel/VBoxContainer" unique_id=1836583671]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="account" type="LineEdit" parent="login_panel/VBoxContainer/input_container" unique_id=1271492928]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_cuut1")
+placeholder_text = "account name"
+alignment = 1
+
+[node name="passwd" type="LineEdit" parent="login_panel/VBoxContainer/input_container" unique_id=238924100]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_cuut1")
+placeholder_text = "password"
+alignment = 1
+
+[node name="2pwd_gap" type="Control" parent="login_panel/VBoxContainer/input_container" unique_id=2125615027]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="passwd2" type="LineEdit" parent="login_panel/VBoxContainer/input_container" unique_id=1801488256]
+visible = false
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("2_cuut1")
+placeholder_text = "confirm_password"
+alignment = 1
+
+[node name="btn_container" type="VBoxContainer" parent="login_panel/VBoxContainer" unique_id=916897849]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="func_btn" type="Button" parent="login_panel/VBoxContainer/btn_container" unique_id=677837338]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_y27e1")
+text = "登录"
+
+[node name="switch_btn" type="Button" parent="login_panel/VBoxContainer/btn_container" unique_id=388682606]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+theme = ExtResource("3_y27e1")
+text = "前往注册"
+metadata/_edit_use_anchors_ = true
+
+[node name="tips" type="Label" parent="login_panel/VBoxContainer" unique_id=1102027286]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.4
+theme_override_colors/font_color = Color(0.8760554, 0, 0.2022103, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=566423286]
+libraries/ = SubResource("AnimationLibrary_rlkab")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=617518599]
+
+[connection signal="button_down" from="login_panel/VBoxContainer/btn_container/func_btn" to="." method="_on_big_btn_button_down"]
+[connection signal="button_down" from="login_panel/VBoxContainer/btn_container/switch_btn" to="." method="_on_small_btn_button_down"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

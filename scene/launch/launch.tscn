@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://qo12qrhhv4fs"]
+
+[ext_resource type="Script" uid="uid://bohm53kg5oi5i" path="res://scene/launch/launch.gd" id="1_3g5cq"]
+[ext_resource type="Theme" uid="uid://uxvephipv284" path="res://theme/bg_theme.tres" id="1_coxjd"]
+[ext_resource type="FontFile" uid="uid://spdljv8r600c" path="res://assert/HackNerdFontMono-BoldItalic.ttf" id="2_3g5cq"]
+
+[sub_resource type="Animation" id="Animation_coxjd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pgzone:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pgzone2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_3g5cq"]
+resource_name = "animat"
+length = 3.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("pgzone:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 3, 3, 3),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.2, -0.25, 0.2, 0.25, 1, -0.5, 0, 0.5, 0, 0, -0.100000024, 0.25, 0.100000024, -0.25),
+"times": PackedFloat32Array(0, 0.8, 2.8, 3.2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("pgzone2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 3, 3, 3),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.125, -0.25, 0.125, 0.25, 1, -0.19999999, 0, 0.19999999, 0, 0, -0.050000012, 0.25, 0.050000012, -0.25),
+"times": PackedFloat32Array(1.5, 2, 2.8, 3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtluk"]
+_data = {
+&"RESET": SubResource("Animation_coxjd"),
+&"animat": SubResource("Animation_3g5cq")
+}
+
+[node name="launch" type="Control" unique_id=1952758609 node_paths=PackedStringArray("animation_player")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3g5cq")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="Panel" type="Panel" parent="." unique_id=228009207]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_coxjd")
+metadata/_edit_use_anchors_ = true
+
+[node name="pgzone" type="Label" parent="." unique_id=454290177]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -60.0
+offset_right = 120.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_3g5cq")
+theme_override_font_sizes/font_size = 32
+text = "PG zone"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="pgzone2" type="Label" parent="." unique_id=2011964482]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 376.0
+offset_top = 268.0
+offset_right = 520.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "power by godot"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1220026784]
+libraries/ = SubResource("AnimationLibrary_qtluk")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

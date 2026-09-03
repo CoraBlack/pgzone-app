@@ -1,0 +1,295 @@
+[gd_scene format=3 uid="uid://dqlmtkc6p4p3o"]
+
+[ext_resource type="Theme" uid="uid://uxvephipv284" path="res://theme/bg_theme.tres" id="1_0imob"]
+[ext_resource type="Script" uid="uid://juwrs7l1d0q6" path="res://scene/main/main.gd" id="1_6vuhr"]
+[ext_resource type="Texture2D" uid="uid://mv3p3om3xfo5" path="res://icon.svg" id="2_6vuhr"]
+[ext_resource type="Theme" uid="uid://bwee1nqikcncr" path="res://theme/float_panel.tres" id="3_qtsyf"]
+[ext_resource type="PackedScene" uid="uid://c481rd01acdym" path="res://scene/blog_overview_item/blog_overview_item.tscn" id="4_a0c6e"]
+[ext_resource type="Script" uid="uid://byiwyjncm4o00" path="res://scene/main/user_icon.gd" id="5_b8g54"]
+[ext_resource type="Theme" uid="uid://bihwhnj1jsfb3" path="res://theme/normal_button.tres" id="5_siuy0"]
+
+[sub_resource type="Theme" id="Theme_vksgl"]
+
+[sub_resource type="Animation" id="Animation_a0c6e"]
+length = 1.000001718820818
+step = 0.016666668
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("user_panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(128, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("user_panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blog_panel:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(320, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("blog_panel:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qtsyf"]
+resource_name = "leave_scene"
+length = 1.3
+step = 0.016666668
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("user_panel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 3, 3, 2),
+"points": PackedFloat32Array(128, -0.25, 0, 0.25, 0, 67, -0.1, 74.5, 0.1, -74.5, -104, -0.05000002, 59.25, 0.05000002, -59.25, -170, -0.16666667, 49.666668, 0, 0),
+"times": PackedFloat32Array(0, 0.4, 0.6000001, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("user_panel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 3, 3, 2),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0, 64, -0.1, 0, 0.1, 0, 64, -0.05000002, 0, 0.05000002, 0, 64, -0.16666667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.4, 0.6000001, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("blog_panel:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 3, 3, 3),
+"points": PackedFloat32Array(320, -0.25, 0, 0.25, 0, 512.00006, -0.099750005, -208, 0.099750005, 208, 959.99994, -0.05000002, -159.99998, 0.05000002, 159.99998, 1152, -0.24975, -208, 0.24975, 208),
+"times": PackedFloat32Array(0.001, 0.4, 0.6000001, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("blog_panel:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 3, 3, 3),
+"points": PackedFloat32Array(64, -0.25, 0, 0.25, 0, 64, -0.099750005, 0, 0.099750005, 0, 64, -0.05000002, 0, 0.05000002, 0, 64, -0.24975, 0, 0.24975, 0),
+"times": PackedFloat32Array(0.001, 0.4, 0.6000001, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_siuy0"]
+_data = {
+&"RESET": SubResource("Animation_a0c6e"),
+&"leave_scene": SubResource("Animation_qtsyf")
+}
+
+[node name="main" type="Control" unique_id=770657088 node_paths=PackedStringArray("animation_player", "blog_list", "http_requester")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6vuhr")
+animation_player = NodePath("AnimationPlayer")
+blog_list = NodePath("blog_panel/ScrollContainer/blog_list")
+http_requester = NodePath("blog_request")
+
+[node name="background" type="Panel" parent="." unique_id=1936792498]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.98800004
+offset_bottom = 7.776001
+theme = ExtResource("1_0imob")
+
+[node name="top" type="Panel" parent="." unique_id=897242905]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055944443
+anchor_top = 0.012345679
+anchor_right = 0.94411117
+anchor_bottom = 0.074308656
+offset_left = -0.44800186
+offset_right = 0.38391113
+offset_bottom = -0.15200806
+metadata/_edit_use_anchors_ = true
+
+[node name="user_panel" type="Panel" parent="." unique_id=125689496]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11100001
+anchor_top = 0.09900001
+anchor_right = 0.257
+anchor_bottom = 0.93200004
+offset_left = 0.12799072
+offset_top = -0.15200806
+offset_right = -0.064086914
+offset_bottom = 0.063964844
+theme = ExtResource("3_qtsyf")
+metadata/_edit_use_anchors_ = true
+
+[node name="user_icon" type="TextureButton" parent="user_panel" unique_id=1924125123]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09523808
+anchor_top = 0.05957039
+anchor_right = 0.90500003
+anchor_bottom = 0.296
+offset_top = -0.16801453
+offset_right = -0.039993286
+offset_bottom = 0.16000366
+pivot_offset = Vector2(68, 64)
+theme = SubResource("Theme_vksgl")
+action_mode = 0
+texture_normal = ExtResource("2_6vuhr")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_b8g54")
+metadata/_edit_use_anchors_ = true
+
+[node name="home_btn" type="Button" parent="user_panel" unique_id=2124795209]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095000006
+anchor_top = 0.34100002
+anchor_right = 0.90500003
+anchor_bottom = 0.41500002
+offset_left = 0.03999901
+offset_top = -0.14001465
+offset_right = -0.040008545
+offset_bottom = -0.1000061
+theme = ExtResource("5_siuy0")
+text = "Home"
+metadata/_edit_use_anchors_ = true
+
+[node name="setting_btn" type="Button" parent="user_panel" unique_id=1736805348]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095000006
+anchor_top = 0.89400005
+anchor_right = 0.90500003
+anchor_bottom = 0.96900004
+offset_left = 0.03999901
+offset_top = 0.23995972
+offset_right = -0.040008545
+offset_bottom = -0.26000977
+offset_transform_position = Vector2(0, 360)
+theme = ExtResource("5_siuy0")
+text = "   Settings"
+metadata/_edit_use_anchors_ = true
+
+[node name="text_icon" type="Label" parent="user_panel/setting_btn" unique_id=661577109]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066176474
+anchor_top = 0.125
+anchor_right = 0.30135295
+anchor_bottom = 0.89400005
+offset_right = 0.01599884
+offset_bottom = -0.0080013275
+text = "⚙"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="blog_panel" type="Panel" parent="." unique_id=1466296034]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27800003
+anchor_top = 0.09900001
+anchor_right = 0.88900006
+anchor_bottom = 0.93200004
+offset_left = -0.25604248
+offset_top = -0.15200806
+offset_right = -0.1303711
+offset_bottom = 0.063964844
+theme = ExtResource("3_qtsyf")
+metadata/_edit_use_anchors_ = true
+
+[node name="blog_list_top" type="Label" parent="blog_panel" unique_id=90899474]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.043
+offset_bottom = -0.22000122
+text = "📚 Blogs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="blog_panel" unique_id=1858489558]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.043
+anchor_right = 1.0
+anchor_bottom = 0.99300003
+offset_top = 0.7799988
+offset_right = 0.0020751953
+offset_bottom = -0.22003174
+follow_focus = true
+horizontal_scroll_mode = 0
+scroll_hint_mode = 3
+
+[node name="blog_list" type="VBoxContainer" parent="blog_panel/ScrollContainer" unique_id=552322038]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="blog_item" parent="blog_panel/ScrollContainer/blog_list" unique_id=426199231 instance=ExtResource("4_a0c6e")]
+visible = false
+layout_mode = 2
+
+[node name="refresh_btn" type="Button" parent="blog_panel" unique_id=1134427138]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85272735
+anchor_top = 0.8291852
+anchor_right = 0.90872735
+anchor_bottom = 0.9041852
+offset_left = -0.31829834
+offset_top = 0.23999023
+offset_right = 0.2578125
+offset_bottom = -0.26000977
+theme = ExtResource("5_siuy0")
+text = "🐽"
+metadata/_edit_use_anchors_ = true
+
+[node name="blog_request" type="HTTPRequest" parent="." unique_id=1715745476]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=109430386]
+libraries/ = SubResource("AnimationLibrary_siuy0")
+
+[connection signal="mouse_entered" from="user_panel/user_icon" to="user_panel/user_icon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="user_panel/user_icon" to="user_panel/user_icon" method="_on_mouse_exited"]
+[connection signal="button_down" from="user_panel/home_btn" to="." method="_on_home_btn_button_down"]
+[connection signal="request_completed" from="blog_request" to="." method="_on_blog_list_request_completed"]

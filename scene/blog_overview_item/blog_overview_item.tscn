@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c481rd01acdym"]
+
+[ext_resource type="Theme" uid="uid://co51amcymqa7k" path="res://theme/blog_item_button.tres" id="1_knu6i"]
+[ext_resource type="Script" uid="uid://b67bgknrbwc04" path="res://scene/blog_overview_item/blog_overview_item.gd" id="1_twndc"]
+
+[node name="blog_item" type="Button" unique_id=439004474 node_paths=PackedStringArray("title_label", "author_label")]
+custom_minimum_size = Vector2(0, 64)
+anchors_preset = -1
+anchor_right = 0.611
+anchor_bottom = 0.09900001
+offset_left = 8.0
+offset_right = -7.8720093
+offset_bottom = -0.15200806
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_knu6i")
+script = ExtResource("1_twndc")
+title = "Title"
+author = "Author"
+title_label = NodePath("title")
+author_label = NodePath("author")
+
+[node name="title" type="Label" parent="." unique_id=293808390]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.042000003
+anchor_top = 0.125
+anchor_right = 0.6706364
+anchor_bottom = 0.765625
+offset_left = -0.12800217
+offset_right = -0.12802124
+offset_bottom = -1.0
+text = "Title"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="author" type="Label" parent="." unique_id=502811081]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75000006
+anchor_top = 0.125
+anchor_right = 0.97900003
+anchor_bottom = 0.75000006
+offset_left = -6.1035156e-05
+offset_right = 0.06402588
+text = "Author"
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
