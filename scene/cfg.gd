@@ -3,7 +3,8 @@ extends Node
 class_name Config
 
 @export var cfg_res: CfgRes
-@export var cfg_path: String = "user://cfg.res"
+const server_api_base: String = "https://101.33.205.242"
+const cfg_path: String = "user://cfg.res"
 
 func _ready() -> void:
 	if FileAccess.file_exists(cfg_path):
@@ -21,4 +22,4 @@ func get_user_token() -> String:
 	return cfg_res.user_token
 	
 func get_api_base() -> String:
-	return cfg_res.server_api_base
+	return server_api_base
