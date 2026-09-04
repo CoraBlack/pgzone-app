@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c36r6udahab7o"
-path="res://.godot/imported/msyh.ttf-a7f96749dbd18b69411824c87e7f1f82.fontdata"
+uid="uid://btwt026d0a44x"
+path="res://.godot/imported/NotoSansSC-Regular.ttf-dd7bffcf6f4241a81dfdebcccd88c357.fontdata"
 
 [deps]
 
-source_file="res://assert/font/msyh.ttf"
-dest_files=["res://.godot/imported/msyh.ttf-a7f96749dbd18b69411824c87e7f1f82.fontdata"]
+source_file="res://assert/font/NotoSansSC-Regular.ttf"
+dest_files=["res://.godot/imported/NotoSansSC-Regular.ttf-dd7bffcf6f4241a81dfdebcccd88c357.fontdata"]
 
 [params]
 
